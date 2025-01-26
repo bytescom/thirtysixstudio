@@ -1,8 +1,8 @@
 import React from 'react'
 
-const divider = () => {
+const divider = ({isBgChange}) => {
   return (
-    <div className='bg-[#ebe5e5] h-[1px] max-w-[98%] m-auto'></div>
+    <div className={`opacity-20 h-[1px] max-w-[98%] m-auto ${!isBgChange? 'bg-[#B9B9BA]': 'bg-black'}`}></div>
   )
 }
 

@@ -1,10 +1,10 @@
 import React from 'react'
 import Divider from './divider'
 
-const textanimation = () => {
+const textanimation = ({isBgChange}) => {
     return (
         <div>
-            <Divider />
+            <Divider isBgChange={isBgChange} />
             <div className='flex justify-start items-center gap-[26rem]'>
                 <div className='text-[11.2vw] ml-6'>Agile</div>
                 <div className='flex flex-col w-[25%]'>
@@ -13,7 +13,7 @@ const textanimation = () => {
                     </p>
                 </div>
             </div>
-            <Divider />
+            <Divider isBgChange={isBgChange} />
             <div className='flex justify-start items-center gap-12'>
                 <div className='text-[11.2vw] ml-4'>Innovative</div>
                 <div className='flex flex-col w-[25%]'>
@@ -22,7 +22,7 @@ const textanimation = () => {
                     </p>
                 </div>
             </div>
-            <Divider />
+            <Divider isBgChange={isBgChange} />
             <div className='flex justify-start items-center gap-[10.5rem]'>
                 <div className='text-[11.2vw] ml-5'>Cultured</div>
                 <div className='flex flex-col w-[25%]'>
@@ -31,7 +31,7 @@ const textanimation = () => {
                     </p>
                 </div>
             </div>
-            <Divider />
+            <Divider isBgChange={isBgChange} />
         </div>
     )
 }

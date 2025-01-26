@@ -1,8 +1,8 @@
 import React from 'react'
 
-const header = () => {
+const header = ({isBgChange}) => {
   return (
-    <div className='h-[3rem] w-[100%] px-[12px] bg-[#fffafa] flex justify-between items-center '>
+    <div className={`h-[3rem] w-[100%] px-[12px] flex justify-between items-center ${!isBgChange? 'bg-[#fffafa]': 'bg-[#fd2c2a]'}`}>
       <div>
         <a href='#'>Thirtysixstudio</a>
       </div>

@@ -1,7 +1,81 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Divider from './divider'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
-const ourservices = () => {
+const categories = [
+  {
+    id: 1,
+    title: "CREATIVE",
+    skills: ["Art Direction",
+      "Creative Director"],
+  },
+  {
+    id: 2,
+    title: "DESIGN",
+    skills: [
+      "Digital Design",
+      "UX/UI Design",
+      "Web Design",
+      "Graphic Design",
+      "3D Design",
+      "Interactive Design",
+      "Illustration Design",
+      "Brand Design",
+    ],
+  },
+  {
+    id: 3,
+    title: "ANIMATION",
+    skills: [
+      "2D Animation",
+      "3D Animation",
+      "Motion Graphics",
+      "Experimental Animation",
+      "Typography Animation",
+    ],
+  },
+  {
+    id: 4,
+    title: "TECHNOLOGY",
+    skills: [
+      "Development",
+      "Implementation",
+      "Creative Coding",
+      "Prototyping",
+      "Quality Assurance",
+      "Testing",
+    ],
+  },
+  {
+    id: 5,
+    title: "PROJECT DELIVERY",
+    skills: [
+      "Production Strategy",
+      "Project Management",
+      "Team Direction",
+    ],
+  },
+  {
+    id: 6,
+    title: "EXAMPLE PRODUCTS",
+    skills: [
+      "Display Ads (Html5, Static, Rich Media)",
+      "Websites",
+      "AR Filters and Experiences",
+      "Social Ads",
+      "Digital Out of Home",
+      "Static and Animated Assets",
+      "Digital Installations",
+      "Design Toolkits",
+    ],
+  },
+];
+
+const ourservices = ({isBgChange}) => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div>
       <div className='flex flex-col gap-[3rem] max-w-[55%] ml-[26%] leading-tight tracking-tight py-[5rem]'>
@@ -10,47 +84,12 @@ const ourservices = () => {
           We provide captivating design, interactive animations, advanced usability, reliable code, and immaculate project coordination. Whether you need a campaign built from scratch or assistance at a specific phase, we’ve got you covered.
         </div>
       </div>
-      <Divider />
-      <div class="bg-[#fffafa] flex items-center justify-center h-full pt-[5rem]">
-        <div class="w-full max-w-2xl">
-          <div class="border-b border-gray-300">
-            <button class="w-full flex justify-between items-center px-4 py-3 focus:outline-none hover:bg-gray-100">
-              <span class="font-medium">CREATIVE</span>
-              <span class="text-xl font-bold text-gray-500">+</span>
-            </button>
-          </div>
-          <div class="border-b border-gray-300">
-            <button class="w-full flex justify-between items-center px-4 py-3 focus:outline-none hover:bg-gray-100">
-              <span class="font-medium">DESIGN</span>
-              <span class="text-xl font-bold text-gray-500">+</span>
-            </button>
-          </div>
-          <div class="border-b border-gray-300">
-            <button class="w-full flex justify-between items-center px-4 py-3 focus:outline-none hover:bg-gray-100">
-              <span class="font-medium">ANIMATION</span>
-              <span class="text-xl font-bold text-gray-500">+</span>
-            </button>
-          </div>
-          <div class="border-b border-gray-300">
-            <button class="w-full flex justify-between items-center px-4 py-3 focus:outline-none hover:bg-gray-100">
-              <span class="font-medium">TECHNOLOGY</span>
-              <span class="text-xl font-bold text-gray-500">+</span>
-            </button>
-          </div>
-          <div class="border-b border-gray-300">
-            <button class="w-full flex justify-between items-center px-4 py-3 focus:outline-none hover:bg-gray-100">
-              <span class="font-medium">PROJECT DELIVERY</span>
-              <span class="text-xl font-bold text-gray-500">+</span>
-            </button>
-          </div>
-          <div class="border-b border-gray-300">
-            <button class="w-full flex justify-between items-center px-4 py-3 focus:outline-none hover:bg-gray-100">
-              <span class="font-medium">EXAMPLE PRODUCTS</span>
-              <span class="text-xl font-bold text-gray-500">+</span>
-            </button>
-          </div>
-        </div>
-      </div>
+      <Divider isBgChange={isBgChange} />
+
+      <div></div>
+
+      <Divider isBgChange={isBgChange} />
+
       <div className='flex flex-col gap-[2rem] max-w-[24%] ml-[26%] leading-tight tracking-tight pt-[5rem] pb-[15rem]'>
         <div className='flex flex-col gap-[3rem]'>
           <p>Got a project in mind? Drop us a line at hello@thirtysixstudio.com or use the form below.</p>
@@ -60,7 +99,7 @@ const ourservices = () => {
           </button>
         </div>
       </div>
-      <Divider/>
+      <Divider isBgChange={isBgChange} />
     </div>
   )
 }
