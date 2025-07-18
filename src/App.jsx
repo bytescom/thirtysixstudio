@@ -59,9 +59,16 @@ const App = () => {
             <img ref={rotateImg} src="rotatecircle.png" alt="Rotating Circle" />
           </div>
         </div>
-        <div ref={clickText} onClick={handleClick} className='text-[15vw] text-center'>
-          Thirtysixstudio
-        </div>
+        <div
+            ref={clickText}
+            onClick={handleClick}
+            className='text-[15vw] text-center cursor-pointer select-none'
+            style={{
+              cursor: `url('/pepper.png') 32 32, pointer`
+            }}
+          >
+            Thirtysixstudio
+          </div>
         <Divider isBgChange={isBgChange} />
       </div>
 
