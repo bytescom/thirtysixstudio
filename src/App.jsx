@@ -84,7 +84,7 @@ const App = () => {
       </div>
 
 
-      <div className={`relative h-full w-full select ${!isBgChange ? 'bg-[#fffafa] dark:bg-black dark:text-white' : 'bg-[#fd2c2a] dark:text-black'} `}>
+      <div className={`relative h-full w-full select ${!isBgChange ? ' dark:bg-black dark:text-white' : 'bg-[#fd2c2a] dark:text-black'} `}>
         <div className='flex justify-center tracking-tight leading-tight pt-[5rem] pb-[12.5rem]'>
           {showCanvas && data[1].map((canvasdetails, index) => (
             <Canvas key={index} details={canvasdetails} />
@@ -105,6 +105,7 @@ const App = () => {
           ))}
           <OurService isBgChange={isBgChange} />
         </div>
+        <Divider isBgChange={isBgChange} />
       </div>
 
 
