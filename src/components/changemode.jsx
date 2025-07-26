@@ -14,11 +14,11 @@ const ChangeMode = ({ isBgChange }) => {
                 {isDark ?
                     <>
                         <img className='rounded-2xl px-[10px] py-[5px]' src="lightmode.svg" alt="" />
-                        <img className='bg-white rounded-2xl px-[14px] py-[5px]' src="darkmode.svg" alt="" />
+                        <img className='bg-white text-black  rounded-2xl px-[14px] py-[5px]' src="darkmode.svg" alt="" />
                     </>
                     :
                     <>
-                        <img className='bg-black rounded-2xl px-[14px] py-[5px]' src="lightmode.svg" alt="" />
+                        <img className='bg-black text-white rounded-2xl px-[14px] py-[5px]' src="lightmode.svg" alt="" />
                         <img className='rounded-xl px-[10px] py-[5px]' src="darkmode.svg" alt="" />
                     </>
                 }

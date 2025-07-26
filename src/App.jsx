@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import Header from './components/header'
+import Navbar from './components/Navbar'
 import Canvas from './components/canvas/canvas'
 import data from './components/canvas/data'
 import LocomotiveScroll from 'locomotive-scroll';
@@ -10,7 +10,7 @@ import ContactForm from './components/contactform';
 import TextAnimation from './components/textanimation';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-
+import Message from './components/message';
 
 
 const App = () => {
@@ -18,6 +18,14 @@ const App = () => {
   const clickText = useRef(null);
   const [showCanvas, setshowCanvas] = useState(false);
   const [isBgChange, setIsBgchange] = useState(false);
+  const [isMessageVisible, setIsMessageVisible] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsMessageVisible(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
 
   useGSAP(() => {
@@ -44,13 +52,16 @@ const App = () => {
 
   return (
     <>
-      <div className={`relative h-full w-full select ${!isBgChange ? 'bg-[#fffafa]' : 'bg-[#fd2c2a]'} `}>
+      <Message isBgChange={isBgChange} isVisible={isMessageVisible} setIsVisible={setIsMessageVisible} />
+
+      
+      <div className={`relative h-full w-full select ${!isBgChange ? 'bg-[#fffafa] dark:bg-black dark:text-white' : 'bg-[#fd2c2a] dark:text-black'} `}>
         {showCanvas && showCanvas && data[0].map((canvasdetails, index) => (
           <Canvas key={index} details={canvasdetails} />
         ))}
-        <Header isBgChange={isBgChange} />
+        <Navbar isBgChange={isBgChange} isMessageVisible={isMessageVisible} />
         <Divider isBgChange={isBgChange} />
-        <div className='relative flex justify-center align-baseline h-[530px] pt-14'>
+        <div className={`relative flex justify-center align-baseline h-[580px] ${isMessageVisible ? 'pt-[13rem]' : 'pt-[8rem]'}`}>
           <div className='flex flex-col w-[25%] leading-tight tracking-tight gap-8'>
             <p className='text-[2rem]'>At Thirtysixstudio, we build immersive digital experiences for brands with a purpose.</p>
             <p>We’re a boutique production studio focused on design, motion, and creative technology, constantly reimagining what digital craft can do for present-time ads and campaigns.</p>
@@ -60,20 +71,20 @@ const App = () => {
           </div>
         </div>
         <div
-            ref={clickText}
-            onClick={handleClick}
-            className='text-[15vw] text-center cursor-pointer select-none'
-            style={{
-              cursor: `url('/pepper.png') 32 32, pointer`
-            }}
-          >
-            Thirtysixstudio
-          </div>
+          ref={clickText}
+          onClick={handleClick}
+          className='text-[15vw] text-center cursor-pointer select-none'
+          style={{
+            cursor: `url('/pepper.png') 32 32, pointer`
+          }}
+        >
+          Thirtysixstudio
+        </div>
         <Divider isBgChange={isBgChange} />
       </div>
 
 
-      <div className={`relative h-full w-full select ${!isBgChange ? 'bg-[#fffafa]' : 'bg-[#fd2c2a]'} `}>
+      <div className={`relative h-full w-full select ${!isBgChange ? 'bg-[#fffafa] dark:bg-black dark:text-white' : 'bg-[#fd2c2a] dark:text-black'} `}>
         <div className='flex justify-center tracking-tight leading-tight pt-[5rem] pb-[12.5rem]'>
           {showCanvas && data[1].map((canvasdetails, index) => (
             <Canvas key={index} details={canvasdetails} />
@@ -97,7 +108,7 @@ const App = () => {
       </div>
 
 
-      <div className={`relative h-full w-full select ${!isBgChange ? 'bg-[#fffafa]' : 'bg-[#fd2c2a]'} `}>
+      <div className={`relative h-full w-full select ${!isBgChange ? 'bg-[#fffafa] dark:bg-black dark:text-white' : 'bg-[#fd2c2a] dark:text-black'} `}>
         {showCanvas && data[3].map((canvasdetails, index) => (
           <Canvas key={index} details={canvasdetails} />
         ))}
@@ -121,7 +132,7 @@ const App = () => {
       </div>
 
 
-      <div className={`relative h-full w-full select ${!isBgChange ? 'bg-[#fffafa]' : 'bg-[#fd2c2a]'} `}>
+      <div className={`relative h-full w-full select ${!isBgChange ? 'bg-[#fffafa] dark:bg-black dark:text-white' : 'bg-[#fd2c2a] dark:text-black'} `}>
         <div className='flex flex-col gap-[4rem] max-w-[55%] ml-[26%] leading-tight tracking-tighter py-[5rem]'>
           {showCanvas && data[4].map((canvasdetails, index) => (
             <Canvas key={index} details={canvasdetails} />
@@ -147,7 +158,7 @@ const App = () => {
       </div>
 
 
-      <div className={`relative h-full w-full select ${!isBgChange ? 'bg-[#fffafa]' : 'bg-[#fd2c2a]'} `}>
+      <div className={`relative h-full w-full select ${!isBgChange ? 'bg-[#fffafa] dark:bg-black dark:text-white' : 'bg-[#fd2c2a] dark:text-black'} `}>
         <div className='flex justify-center tracking-tight leading-tight pt-[5rem] pb-[10rem]'>
           {showCanvas && data[6].map((canvasdetails, index) => (
             <Canvas key={index} details={canvasdetails} />
@@ -209,7 +220,7 @@ const App = () => {
 
 
 
-      <div className={`relative h-[475px] w-full select ${!isBgChange ? 'bg-[#fffafa]' : 'bg-[#fd2c2a]'} `}>
+      <div className={`relative h-[475px] w-full select ${!isBgChange ? 'bg-[#fffafa] dark:bg-black dark:text-white' : 'bg-[#fd2c2a] dark:text-black'} `}>
         {showCanvas && data[9].map((canvasdetails, index) => (
           <Canvas key={index} details={canvasdetails} />
         ))}

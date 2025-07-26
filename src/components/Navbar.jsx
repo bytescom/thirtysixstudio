@@ -29,7 +29,7 @@ const Navbar = ({ isBgChange, isMessageVisible }) => {
   }, [lastScrollY]);
 
   return (
-    <div className={`transition-transform duration-500 fixed z-50 w-full ${showNavbar ? 'translate-y-0' : '-translate-y-full'}      ${isMessageVisible ? 'top-[42px]' : 'top-0'}`}>
+    <div className={`transition-transform duration-500 fixed z-50 w-full ${showNavbar ? 'translate-y-0' : '-translate-y-full'}  ${isMessageVisible ? 'top-[42px]' : 'top-0'}`}>
       <div className={`h-[3rem] w-full px-[12px] flex justify-between items-center ${!isBgChange ? 'bg-[#fffafa] dark:bg-black dark:text-white' : 'bg-[#fd2c2a] dark:text-black'}`}>
         <div>
           <a href='#'>Thirtysixstudio</a>
