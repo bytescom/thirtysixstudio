@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import Divider from './divider'
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
@@ -7,8 +6,7 @@ const categories = [
   {
     id: 1,
     title: "CREATIVE",
-    skills: ["Art Direction",
-      "Creative Director"],
+    skills: ["Art Direction", "Creative Director"],
   },
   {
     id: 2,
@@ -72,37 +70,38 @@ const categories = [
   },
 ];
 
-const ourservices = ({isBgChange}) => {
-
+const OurServices = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
-      <div className='flex flex-col gap-[3rem] max-w-[55%] ml-[26%] leading-tight tracking-tight py-[5rem]'>
-        <div >OUR SERVICES</div>
-        <div className='flex flex-col gap-[3rem] text-[2rem]'>
-          We provide captivating design, interactive animations, advanced usability, reliable code, and immaculate project coordination. Whether you need a campaign built from scratch or assistance at a specific phase, we’ve got you covered.
-        </div>
+    <div >
+      <div 
+      onClick={() => setIsOpen(!isOpen)}
+        >
+        {categories.map((categoryItem) => (
+          <div key={categoryItem.id}>
+            <div className='accordion_title'>
+              <h3>{categoryItem.title}</h3>
+              <span className='border-gray-700 hover:border-white border-[1px] rounded-2xl py-1 px-4'>
+                {!isOpen ? (
+                  <FontAwesomeIcon icon={faPlus} />
+                ) : (
+                  <FontAwesomeIcon icon={faMinus} />
+                )}
+              </span>
+            </div>
+            {isOpen && (
+              <div>
+                {categoryItem.skills.map((skill, index) => (
+                  <p key={index}>{skill}</p>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
       </div>
-      <Divider isBgChange={isBgChange} />
-
-      <div></div>
-
-      <Divider isBgChange={isBgChange} />
-
-      <div className='flex flex-col gap-[2rem] max-w-[24%] ml-[26%] leading-tight tracking-tight pt-[5rem] pb-[15rem]'>
-        <div className='flex flex-col gap-[3rem]'>
-          <p>Got a project in mind? Drop us a line at hello@thirtysixstudio.com or use the form below.</p>
-          <p>Not sure what you need? We’re here to help you define the undefined. Let’s explore all creative and technical possibilities together through one of our tailored labs, where we champion future-forward thinking within an ethical framework.</p>
-          <button className='text-left'>
-            <span className='text-sm underline border-[1px] border-[#ebe5e5] rounded-[25px] px-[35px] py-[10px]'>BRING THE HEAT!</span>
-          </button>
-        </div>
-      </div>
-      <Divider isBgChange={isBgChange} />
     </div>
-  )
-}
+  );
+};
 
-export default ourservices
-
+export default OurServices;

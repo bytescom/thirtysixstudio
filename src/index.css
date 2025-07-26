@@ -2,24 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: helvetica;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: helvetica;
 }
 
-*::selection{
-    background-color: black;
-    color: white;
+*::selection {
+  background-color: black;
+  color: white;
 }
 
-.btnhover:hover{
-    background-color: black;
-    color: white;
+.btnhover:hover {
+  background-color: black;
+  color: white;
 }
 
-canvas{
-    pointer-events: none;
+/* restrit from selection of canvas components */
+canvas {
+  pointer-events: none;
 }
 
+:root {
+  --background: white;
+  --text: black;
+}
+
+.dark {
+  --background: black;
+  --text: white;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+/* apply on change mode toggle for smooth-transition  */
+.trans-changemode {
+  transition: all 0.3s ease-in-out;
+}
