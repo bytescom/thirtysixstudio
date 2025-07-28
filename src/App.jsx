@@ -54,7 +54,7 @@ const App = () => {
     <>
       <Message isBgChange={isBgChange} isVisible={isMessageVisible} setIsVisible={setIsMessageVisible} />
 
-      
+
       <div className={`relative h-full w-full select ${!isBgChange ? 'bg-[#fffafa] dark:bg-black dark:text-white' : 'bg-[#fd2c2a] dark:text-black'} `}>
         {showCanvas && showCanvas && data[0].map((canvasdetails, index) => (
           <Canvas key={index} details={canvasdetails} />
@@ -84,7 +84,7 @@ const App = () => {
       </div>
 
 
-      <div className={`relative h-full w-full select ${!isBgChange ? ' dark:bg-black dark:text-white' : 'bg-[#fd2c2a] dark:text-black'} `}>
+      <div className={`relative h-full w-full select ${!isBgChange ? 'bg-[#fffafa] dark:bg-black dark:text-white' : 'bg-[#fd2c2a] dark:text-black'} `}>
         <div className='flex justify-center tracking-tight leading-tight pt-[5rem] pb-[12.5rem]'>
           {showCanvas && data[1].map((canvasdetails, index) => (
             <Canvas key={index} details={canvasdetails} />
@@ -125,7 +125,7 @@ const App = () => {
           <div className='flex flex-col gap-[4rem]'>
             <p >Thirtysixstudio is founded by Gita Jagessar, a queer person of color and seasoned production director from Amsterdam. With over 12 years of experience in digital advertising, Gita has worked with renowned global brands such as Netflix, Converse, Travis Scott, Ben & Jerry’s, and Cash App.</p>
             <button className='text-left'>
-              <span className='text-sm underline border-[1px] border-[#ebe5e5] rounded-[25px] px-[35px] py-[10px] btnhover'>LEARN MORE</span>
+              <span className='text-sm underline border-[1px] border-[#ebe5e5] rounded-[25px] px-[35px] py-[8px] btnhover'>LEARN MORE</span>
             </button>
           </div>
         </div>
@@ -152,7 +152,9 @@ const App = () => {
           <p>Our SS36 work includes community-centric projects for local marginalized groups, as well as career initiatives for marginalized industry talent.</p>
           <p>As a client, the most impactful way you can assist us in reaching our social sustainability goals is by collaborating with our team on a project. We warmly welcome partner- and sponsorships from like-minded individuals and organizations.</p>
           <button className='text-left'>
-            <span className='text-sm underline border-[1px] border-black rounded-[25px] px-[25px] py-[6px] btnhover'>GET IN TOUCH</span>
+            <span className='text-sm underline border-[1px] border-[#ebe5e5] rounded-[25px] px-[35px] py-[8px] btnhover'>
+              GET IN TOUCH
+            </span>
           </button>
         </div>
         <Divider isBgChange={isBgChange} />
@@ -172,7 +174,7 @@ const App = () => {
               <p>If you are a multi-talented individual with exceptional communication skills, eager to elevate your digital craft together with us, we want to hear from you.</p>
               <p>We specifically welcome progressive people who value high-quality work and workplace well-being equally. At Thirtysixstudio, we believe that one can only exist in the presence of the other.</p>
               <button className='text-left'>
-                <span className='text-sm underline border-[1px] border-[#ebe5e5] rounded-[25px] px-[35px] py-[10px] btnhover'>
+                <span className='text-sm underline border-[1px] border-[#ebe5e5] rounded-[25px] px-[35px] py-[8px] btnhover'>
                   DROP US A LINE
                 </span>
               </button>
@@ -210,7 +212,7 @@ const App = () => {
               <p className='text-[2rem]'>Pssst. Looking for something spicy?</p>
               <p >Find the floating adjuma pepper or click the big red button below to unlock our fiery alter ego. Be warned, it’s hot in there! Don’t forget to turn on your sound.</p>
               <button className='text-left'>
-                <span className='text-sm underline bg-[#fd2c2a] border-[1px] border-[#ebe5e5] rounded-[25px] px-[35px] py-[10px] btnhover'>BRING THE HEAT!</span>
+                <span className='text-sm underline bg-[#fd2c2a] border-[1px] border-[#ebe5e5] rounded-[25px] px-[35px] py-[8px] btnhover'>BRING THE HEAT!</span>
               </button>
             </div>
           </div>
@@ -239,7 +241,7 @@ const App = () => {
             <div className='pl-3'>hello@thirtysixstudio.com</div>
             <div className='flex '>
               <button className='text-left '>
-                <span className='text-sm underline border-[1px] border-[#ebe5e5] rounded-[25px] px-[35px] py-[10px] btnhover'>PRIVACY STATEMENT</span>
+                <span className='text-sm underline border-[1px] border-[#ebe5e5] rounded-[25px] px-[35px] py-[8px] btnhover'>PRIVACY STATEMENT</span>
               </button>
             </div>
           </div>

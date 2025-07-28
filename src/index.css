@@ -14,11 +14,19 @@
   color: white;
 }
 
+
 .btnhover:hover {
-  background-color: black;
+  background: black;
   color: white;
 }
 
+/* Dark Mode Override */
+@media (prefers-color-scheme: dark) {
+  .btnhover:hover {
+    background: white;
+    color: black;
+  }
+}
 /* restrit from selection of canvas components */
 canvas {
   pointer-events: none;
