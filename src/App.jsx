@@ -80,7 +80,7 @@ const App = () => {
 
       {/* What We Do Section */}
       <div className={`relative h-full w-full select ${!isBgChange ? 'bg-[#fffafa] dark:bg-black dark:text-white' : 'bg-[#fd2c2a] dark:text-black'} `}>
-        <div className='flex flex-col lg:flex-row justify-center gap-8 lg:gap-[18.75rem] px-3 lg:pl-[6.875rem] tracking-tight leading-tight pt-[5m] pb-[12m]'>
+        <div className='flex flex-col lg:flex-row justify-center gap-8 lg:gap-[18.75rem] px-3 lg:pl-[6.875rem] tracking-tight leading-tight pt-[5rem] pb-[12rem]'>
           {/* Canvas elements */}
           {showCanvas && data[1].map((canvasdetails, index) => (
             <Canvas key={index} details={canvasdetails} />
@@ -114,7 +114,7 @@ const App = () => {
         {showCanvas && data[3].map((canvasdetails, index) => (
           <Canvas key={index} details={canvasdetails} />
         ))}
-        <div className='flex flex-col lg:flex-row justify-center gap-8 lg:gap-[18.75rem] px-3 lg:pl-[6.875rem] tracking-tight leading-tight pt-[5m]'>
+        <div className='flex flex-col lg:flex-row justify-center gap-8 lg:gap-[18.75rem] px-3 lg:pl-[6.875rem] tracking-tight leading-tight pt-[5rem]'>
           <h2 className='text-xl  '>02 - WHO ARE WE</h2>
           <div className='flex flex-col lg:w-[21rem] gap-10'>
             <p className='text-[2rem]'>Our vision is to simplify digital production while creating social impact and opportunity.</p>
@@ -123,7 +123,7 @@ const App = () => {
 
         <TextAnimation isBgChange={isBgChange} />
 
-        <div className='flex flex-col lg:flex-row justify-center gap-8 lg:gap-[20rem] px-3 lg:pl-[16rem] tracking-tight leading-tight pt-[8m] pb-[15m]'>
+        <div className='flex flex-col lg:flex-row justify-center gap-8 lg:gap-[20rem] px-3 lg:pl-[16rem] tracking-tight leading-tight pt-[8rem] pb-[15rem]'>
           <div></div>
           <div className='flex flex-col lg:w-[21rem] gap-16'>
             <p className='text-[2rem]'>We represent today's world: progressive and engaged.</p>
@@ -143,7 +143,7 @@ const App = () => {
           {showCanvas && data[4].map((canvasdetails, index) => (
             <Canvas key={index} details={canvasdetails} />
           ))}
-          <div className='flex flex-col lg:w-[50rem] gap-[4rem] leading-tight tracking-tighter pl-3 lg:pl-[3rem] lg:py-[5m]'>
+          <div className='flex flex-col lg:w-[50rem] gap-[4rem] leading-tight tracking-tighter pl-3 lg:pl-[3rem] lg:py-[5rem]'>
             <h2 className='text-xl'>03 - HOW TO GIVE BACK</h2>
             <div className='flex flex-col gap-[3rem] text-[2rem]  '>
               <p>At Thirtysix Studio, we recognize that our industry can perpetuate harm. We believe we have to try and reverse some of these imbalances. That’s why we’re launching SS36, our local social sustainability hub.</p>
@@ -154,7 +154,7 @@ const App = () => {
 
         <Divider isBgChange={isBgChange} />
 
-        <div className='flex justify-start lg:justify-center w-[100%] px-3 py-[5m]'>
+        <div className='flex justify-start lg:justify-center w-[100%] px-3 py-[5rem]'>
           {showCanvas && data[5].map((canvasdetails, index) => (
             <Canvas key={index} details={canvasdetails} />
           ))}
@@ -205,7 +205,7 @@ const App = () => {
           <OpenRole />
           <Divider isBgChange={isBgChange} />
           {/* Clients */}
-          <div className='flex justify-start lg:justify-center w-[100%] px-3 py-[5m]'>
+          <div className='flex justify-start lg:justify-center w-[100%] px-3 py-[5rem]'>
             <div className='flex flex-col gap-[2rem] w-[44rem] leading-tight tracking-tight'>
               <h2 className='text-xl  '>CLIENTS</h2>
               <div className='flex flex-col gap-[3rem] lg:w-[21rem]  '>

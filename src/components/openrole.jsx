@@ -33,7 +33,7 @@ const OpenRole = ({ isBgChange }) => {
 
 
     return (
-        <div className='max-w-[96.5%] lg:max-w-[98%] m-auto tracking-tight leading-tight py-[6m]'>
+        <div className='max-w-[96.5%] lg:max-w-[98%] m-auto tracking-tight leading-tight py-[6rem]'>
             {/* Parent Container with border */}
             <div className='cursor-pointer border-b border-[#292929]'>
                 <div
