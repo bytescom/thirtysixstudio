@@ -114,7 +114,7 @@ const App = () => {
         {showCanvas && data[3].map((canvasdetails, index) => (
           <Canvas key={index} details={canvasdetails} />
         ))}
-        <div className='flex flex-col lg:flex-row justify-center gap-8 lg:gap-[18.75rem] px-3 lg:pl-[6.875rem] tracking-tight leading-tight pt-[5rem]'>
+        <div className='flex flex-col lg:flex-row justify-center gap-8 lg:gap-[18.75rem] px-3 lg:pl-[6.875rem] tracking-tight leading-tight py-[8rem]'>
           <h2 className='text-xl  '>02 - WHO ARE WE</h2>
           <div className='flex flex-col lg:w-[21rem] gap-10'>
             <p className='text-[2rem]'>Our vision is to simplify digital production while creating social impact and opportunity.</p>
@@ -175,7 +175,7 @@ const App = () => {
 
       <div className={`relative h-full w-full select ${!isBgChange ? 'bg-[#fffafa] dark:bg-black dark:text-white' : 'bg-[#fd2c2a] dark:text-black'} `}>
         {/* Talk To Us Section*/}
-        <div className='flex flex-col lg:flex-row justify-center gap-8 lg:gap-[19.625rem] px-3 lg:pl-[6.75rem] tracking-tight leading-tight'>
+        <div className='flex flex-col lg:flex-row justify-center gap-8 lg:gap-[19.625rem] px-3 lg:pl-[6.75rem] tracking-tight leading-tight pt-[6rem] pb-[10rem]'>
           {showCanvas && data[6].map((canvasdetails, index) => (
             <Canvas key={index} details={canvasdetails} />
           ))}

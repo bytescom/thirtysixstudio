@@ -9,24 +9,30 @@
   font-family: helvetica;
 }
 
+/* Selection color sets on both mode */
 *::selection {
   background-color: black;
   color: white;
 }
 
+.dark *::selection {
+  background-color: white;
+  color: black;
+}
 
+
+/* for button hover in both mode */
 .btnhover:hover {
   background: black;
   color: white;
 }
 
-/* Dark Mode Override */
-@media (prefers-color-scheme: dark) {
-  .btnhover:hover {
-    background: white;
-    color: black;
-  }
+.dark .btnhover:hover {
+  background: white;
+  color: black;
 }
+
+
 /* restrit from selection of canvas components */
 canvas {
   pointer-events: none;

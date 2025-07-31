@@ -91,7 +91,7 @@ const OurServices = ({ isBgChange }) => {
   return (
     <div>
       {/* OurService */}
-      <div className='flex lg:justify-center lg:items-center'>
+      <div className='flex lg:justify-center lg:items-center py-[8rem]'>
         <div className='flex flex-col lg:w-[50rem] gap-[4rem] leading-tight tracking-tighter pl-3 lg:pl-[3rem] lg:py-[5m]'>
           <h2 className='text-xl'>OUR SERVICES</h2>
           <p className='flex flex-col gap-[3rem] text-[2rem]  '>
@@ -165,7 +165,7 @@ const OurServices = ({ isBgChange }) => {
       </div>
 
       {/* btnhover are used from index.css as utility. */}
-      <div className='flex justify-start lg:justify-center w-[100%] px-3 py-[5m]'>
+      <div className='flex justify-start lg:justify-center w-[100%] px-3 py-[6rem]'>
         <div className='flex flex-col gap-[2rem] w-[44rem] leading-tight tracking-tight'>
           <div className='lg:w-[21rem] gap-12 flex flex-col'>
           <p>Our SS36 work includes community-centric projects for local marginalized groups, as well as career initiatives for marginalized industry talent.</p>
@@ -186,23 +186,3 @@ const OurServices = ({ isBgChange }) => {
 };
 
 export default OurServices;
-
-
-//  What was improved:
-// border-b-[1px] → border-b
-// Tailwind has utilities for 1px border: just use border-b.
-
-// border-[#B9B9BA] border-opacity-30 → border-[#B9B9BA]/30
-// Tailwind shorthand with slash syntax is cleaner and modern.
-
-// Added cursor-pointer
-// Helpful for clarity on clickable elements.
-
-// Added transition-colors duration-200
-// Smooth hover effect.
-
-// Semantic improvement for h3
-// Optionally added text-lg font-medium for clarity (customize as needed).
-
-// Formatting and readability
-// Cleaned up the className string for easier maintenance.
