@@ -116,7 +116,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For any inquiries, please email me at [kumarpankaj72863@gmail.com](mailto:your.email@example.com).
+For any inquiries, please email me at [pankajk07414@gmail.com](mailto:your.email@example.com).
 
 ---
 
