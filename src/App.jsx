@@ -55,8 +55,7 @@ const App = () => {
 
   return (
     <>
-      <Message isBgChange={isBgChange} isVisible={isMessageVisible} setIsVisible={setIsMessageVisible} />
-
+      {/* <Message isBgChange={isBgChange} isVisible={isMessageVisible} setIsVisible={setIsMessageVisible} /> */}
 
       <div className={`relative h-full w-full select ${!isBgChange ? 'bg-[#fffafa] dark:bg-black dark:text-white' : 'bg-[#fd2c2a] dark:text-black'} `}>
         {showCanvas && showCanvas && data[0].map((canvasdetails, index) => (

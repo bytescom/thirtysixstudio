@@ -1,6 +1,6 @@
 # Thirtysixstudio Clone
 
-A clone of the Thirtysixstudio Awwwards-nominated site, built with React and Tailwind CSS. This project showcases immersive digital experiences, creative design, interactive animations, and a dark/light theme toggle.
+A creative reimagining of thirtysixstudio.com — an Awwwards-winning digital experience — built with React and Tailwind CSS, featuring immersive interactions, refined design, fluid animations, and a dynamic dark/light mode toggle.
 
 ---
 
@@ -120,4 +120,5 @@ For any inquiries, please email me at [kumarpankaj72863@gmail.com](mailto:your.e
 
 ---
 
-## Built for learning and demonstration purposes only.
+⚠️ **Disclaimer:** This project is for learning and educational purposes only.
+
