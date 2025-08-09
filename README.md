@@ -23,12 +23,27 @@ A creative reimagining of thirtysixstudio.com — an Awwwards-winning digital ex
 
 ---
 
-## Tech Stack
+## 💻 Tech Stack
 
-- **React** (with hooks and context)
-- **Tailwind CSS** (`darkMode: "class"`)
-- **GSAP** (animations)
-- **Locomotive Scroll** (smooth scrolling)
+### 🚀 Frontend
+| Technology | Badge |
+|------------|-------|
+| HTML5      | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) |
+| CSS3       | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) |
+| JavaScript | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) |
+| React      | ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) |
+| TailwindCSS| ![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white) |
+
+### 🔧 Backend / APIs
+| Technology | Badge |
+|------------|-------|
+| GitHub API | ![GitHub API](https://img.shields.io/badge/GitHub%20API-181717?style=for-the-badge&logo=github&logoColor=white) |
+
+### 🎯 Libraries & Tools
+- **GSAP** – High-performance animations
+- **Locomotive Scroll** – Smooth scrolling effects
+- **React Hooks & Context API** – State management
+- **Vite** – Fast development server & bundler
 
 ---
 
